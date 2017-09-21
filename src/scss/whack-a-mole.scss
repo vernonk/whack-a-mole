@@ -1,0 +1,72 @@
+$bg-green: #14703D;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  /* better helvetica: https://css-tricks.com/snippets/css/better-helvetica/ */
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+}
+
+.text-red {
+  color: #ff0000;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 75%;
+  min-width: 420px;
+
+  .text, .controls {
+    flex: 1 0 50%;
+    margin-bottom: 1rem;
+  }
+
+  .score {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .controls {
+    text-align: right;
+  }
+
+  .timer {
+    margin-top: 0.5em;
+  }
+
+  .mole {
+    flex: 1 0 32%;
+    height: 150px;
+    color: white;
+    border: 1px solid #333;
+    background: url('../images/empty.png') no-repeat 50% $bg-green;
+      &.bg-open {
+        background: url('../images/open.png') no-repeat 50% $bg-green;
+      }
+      &.bg-hit {
+        background: url('../images/hit.png') no-repeat 50% $bg-green;
+      }
+      &.bg-miss {
+        background: url('../images/miss.png') no-repeat 50% $bg-green;
+      }
+  }
+}
+
+button {
+  background: #2574A9;
+  color: white;
+  border: none;
+  border-radius: 0;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+}
